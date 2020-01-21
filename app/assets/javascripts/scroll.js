@@ -13,7 +13,7 @@ $(function(){
         $(this).css('transform','translateY(0)');
       }
     });
-  }
+  }s
   animation();
   $(window).scroll(function (){
     animation();
