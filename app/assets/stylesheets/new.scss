@@ -133,11 +133,52 @@
 }
 
 .box{
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  color: white;
-  // transform: scale(3);
+  position: relative;
+  z-index: 0;
+  padding: 50px 30px;
+  display: flex;
+}
+
+.box::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left:0;
+  top: 0;
+ 
+  /*四角形を傾けます*/
+  transform: skewY(-5deg);
+  transform-origin: bottom left;
+ 
+  z-index: -1;
+  width: 100%;
+  height: 200px;
+  background:red;
+}
+.dg{
+  position: relative;
+  z-index: 0;
+  padding: 50px 30px;
+  display: flex;
+}
+
+.dg::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left:0;
+  top: 0;
+ 
+  /*四角形を傾けます*/
+  transform: skewY(-5deg);
+  transform-origin: bottom left;
+ 
+  z-index: -1;
+  width: 100%;
+  height: 200px;
+  background:blue;
 }
 // body {
 //   margin: 0;
